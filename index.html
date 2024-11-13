@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Wei</title>
+
+    <!-- ===== Google Fonts ===== -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===== Box Icons ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <a href="#" class="nav__logo">David Wei</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <!-- Side Button for Art Portfolio -->
+            <div class="art-button">
+                <a href="art.html" class="art-button__link">
+                    <i class='bx bx-palette'></i>
+                </a>
+                <span class="art-button__text">See my creative side :)</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home" id="home">
+            <h1 class="home__title">Hi, I'm</h1>
+            <h1 class="home__name">David Wei.</h1>
+            <h2 class="home__subtitle">Software Engineer & Product Manager</h2>
+
+            <a href="#contact" class="button">Get in Touch</a>
+
+            <!-- Social Icons -->
+            <div class="home__social">
+                <a href="https://github.com/dawei25" class="home__social-icon">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://linkedin.com/in/david-wei23" class="home__social-icon">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/about.JPEG" alt="About David">
+                </div>
+
+                <div class="about__data">
+                    <h2 class="about__subtitle">I'm David Wei</h2>
+                    <p class="about__text">
+                        I currently study Computer Science and Industrial Engineering at Northwestern. I love the intersection of technology and business and have experience in software engineering, product management, and consulting. My interests lie in applying AI/ML to solve real-world problems, and I'm actively working on projects that make an impact.
+                        <br>
+                        <br>
+                        In my free time, I enjoy painting, check out the art page ;), cooking, and exploring new places. Always open to trying new things and meeting new people! Hope you enjoy my website!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills__container" id="skills-container">
+                <!-- Skill cards will be injected here by JavaScript -->
+            </div>
+        </section>
+    
+        <!-- Template for Skill Card -->
+        <template id="skill-card-template">
+            <div class="skill-card">
+                <div class="skill-background"></div>
+                <div class="skill-inner">
+                    <div class="skill-front">
+                        <img src="" alt="">
+                    </div>
+                    <div class="skill-back">
+                        <span class="skill-name"></span>
+                    </div>
+                </div>
+            </div>
+        </template>
+    
+        <!-- Include the skills data and script -->
+        <script src="skills.js"></script>
+        <script src="script.js"></script>
+        
+
+        <!--===== PROJECTS =====-->
+        <section class="projects section" id="projects">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects__container bd-grid">
+                <!-- Project 1 -->
+                <div class="projects__img">
+                    <img src="assets/img/esg.webp" alt="ESG Evaluator">
+                    <div class="projects__description">
+                        <h3>ESG Evaluator</h3>
+                        <p>An AI-driven system analyzing reports and news for real-time insights on companies' environmental and ethical performance.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="projects__img">
+                    <img src="assets/img/project2.jpg" alt="Legacy Data Migration">
+                    <div class="projects__description">
+                        <h3>Legacy Data Migration</h3>
+                        <p>Migrated and optimized 10 years of sales data to Google Cloud, automating the ETL process.</p>
+                    </div>
+                </div>
+
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <form action="mailto:davidwei@u.northwestern.edu" method="post" class="contact__form">
+                    <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                    <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                    <textarea name="message" cols="0" rows="10" placeholder="Message" class="contact__input" required></textarea>
+                    <input type="submit" value="Send Message" class="contact__button button">
+                </form>
+
+                <!-- Additional contact information -->
+                <div class="contact__info">
+                    <p>Or if you’d prefer my contacts:</p>
+                    <p><i class="contact__icon fas fa-envelope"></i> <a href="mailto:davidwei@u.northwestern.edu">davidwei@u.northwestern.edu</a></p>
+                    <p><i class="contact__icon fas fa-phone"></i> <a href="tel:8457290124">845-729-0124</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p class="footer__title">David Wei</p>
+        <div class="footer__social">
+            <a href="https://github.com/dawei25" class="footer__icon"><i class='bx bxl-github'></i></a>
+            <a href="https://linkedin.com/in/david-wei23" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <p>&#169; 2024 David Wei. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== SCROLL REVEAL ===== -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ===== MAIN JS ===== -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
