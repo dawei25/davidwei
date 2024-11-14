@@ -4,7 +4,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const skillsContainer = document.getElementById('skills-container');
     const template = document.getElementById('skill-card-template');
+    const airplanesContainer = document.getElementById('airplanes-container');
 
+    // Function to create skill cards
     skills.forEach(skill => {
         // Clone the template content
         const clone = template.content.cloneNode(true);
@@ -21,4 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Append the cloned skill card to the container
         skillsContainer.appendChild(clone);
     });
+
+    
 });
+
+

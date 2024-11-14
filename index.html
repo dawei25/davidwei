@@ -39,7 +39,7 @@
 
             <!-- Side Button for Art Portfolio -->
             <div class="art-button">
-                <a href="art.html" class="art-button__link">
+                <a href="art.html" class="art-button__link" aria-label="Art Portfolio">
                     <i class='bx bx-palette'></i>
                 </a>
                 <span class="art-button__text">See my creative side :)</span>
@@ -58,10 +58,10 @@
 
             <!-- Social Icons -->
             <div class="home__social">
-                <a href="https://github.com/dawei25" class="home__social-icon">
+                <a href="https://github.com/dawei25" class="home__social-icon" aria-label="GitHub">
                     <i class='bx bxl-github'></i>
                 </a>
-                <a href="https://linkedin.com/in/david-wei23" class="home__social-icon">
+                <a href="https://linkedin.com/in/david-wei23" class="home__social-icon" aria-label="LinkedIn">
                     <i class='bx bxl-linkedin'></i>
                 </a>
             </div>
@@ -88,13 +88,14 @@
             </div>
         </section>
 
+        <!--===== SKILLS =====-->
         <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>
             <div class="skills__container" id="skills-container">
                 <!-- Skill cards will be injected here by JavaScript -->
             </div>
         </section>
-    
+
         <!-- Template for Skill Card -->
         <template id="skill-card-template">
             <div class="skill-card">
@@ -109,11 +110,10 @@
                 </div>
             </div>
         </template>
-    
+
         <!-- Include the skills data and script -->
         <script src="skills.js"></script>
         <script src="script.js"></script>
-        
 
         <!--===== PROJECTS =====-->
         <section class="projects section" id="projects">
@@ -157,19 +157,63 @@
                 <!-- Additional contact information -->
                 <div class="contact__info">
                     <p>Or if you’d prefer my contacts:</p>
-                    <p><i class="contact__icon fas fa-envelope"></i> <a href="mailto:davidwei@u.northwestern.edu">davidwei@u.northwestern.edu</a></p>
-                    <p><i class="contact__icon fas fa-phone"></i> <a href="tel:8457290124">845-729-0124</a></p>
+                    <p>
+                        <i class="contact__icon bx bxs-envelope"></i>
+                        <a href="mailto:davidwei@u.northwestern.edu">davidwei@u.northwestern.edu</a>
+                    </p>
+                    <p>
+                        <i class="contact__icon bx bxs-phone"></i>
+                        <a href="tel:8457290124">845-729-0124</a>
+                    </p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- ===== Decorative Elements ===== -->
+    <div class="airplanes-container" id="airplanes-container">
+        <img src="assets/svg/airplane.svg" alt="Paper Plane" class="plane">
+    </div>
+
+    <div class="clouds">
+        <svg class="cloud big front slowest" width="762px" height="331px" viewBox="0 0 762 331" aria-hidden="true">
+            <path fill="#F0F0F0" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+        </svg>
+        <svg class="cloud distant smaller" width="762px" height="331px" viewBox="0 0 762 331" aria-hidden="true">
+            <path fill="#F0F0F0" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+        </svg>
+        <svg class="cloud small slow" width="762px" height="331px" viewBox="0 0 762 331" aria-hidden="true">
+            <path fill="#F0F0F0" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+        </svg>
+        <svg class="cloud distant super-slow massive" width="762px" height="331px" viewBox="0 0 762 331" aria-hidden="true">
+            <path fill="#F0F0F0" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+        </svg>
+        <svg class="cloud slower" width="762px" height="331px" viewBox="0 0 762 331" aria-hidden="true">
+            <path fill="#F0F0F0" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+        </svg>
+    </div>
+
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <p class="footer__title">David Wei</p>
         <div class="footer__social">
-            <a href="https://github.com/dawei25" class="footer__icon"><i class='bx bxl-github'></i></a>
-            <a href="https://linkedin.com/in/david-wei23" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/dawei25" class="footer__icon" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="https://linkedin.com/in/david-wei23" class="footer__icon" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
         </div>
         <p>&#169; 2024 David Wei. All rights reserved.</p>
     </footer>
