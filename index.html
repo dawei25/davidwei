@@ -3,24 +3,25 @@
 
 <head>
     <!-- Meta -->
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Wei</title>
 
-    <!-- ===== Google Fonts ===== -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- ===== Box Icons ===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Box Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <!-- ===== HEADER ===== -->
+    <!-- Header -->
     <header class="l-header">
         <nav class="nav bd-grid">
-            <a href="#" class="nav__logo">David Wei</a>
+            <a href="#home" class="nav__logo">David Wei</a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -33,7 +34,7 @@
             </div>
 
             <!-- Mobile Menu Toggle -->
-            <div class="nav__toggle" id="nav-toggle">
+            <div class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" role="button" tabindex="0">
                 <i class='bx bx-menu'></i>
             </div>
 
@@ -48,10 +49,9 @@
     </header>
 
     <main class="l-main">
-        <!--===== HOME =====-->
+        <!-- Home Section -->
         <section class="home" id="home">
-            <h1 class="home__title">Hi, I'm</h1>
-            <h1 class="home__name">David Wei.</h1>
+            <h1 class="home__title">Hi, I'm <br><span class="home__name">David Wei.</span></h1>
             <h2 class="home__subtitle">Software Engineer & Product Manager</h2>
 
             <a href="#contact" class="button">Get in Touch</a>
@@ -67,21 +67,20 @@
             </div>
         </section>
 
-        <!--===== ABOUT =====-->
+        <!-- About Section -->
         <section class="about section" id="about">
             <h2 class="section-title">About</h2>
 
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <img src="assets/img/about.JPEG" alt="About David">
+                    <img src="assets/img/about.jpeg" alt="Portrait of David Wei">
                 </div>
 
                 <div class="about__data">
-                    <h2 class="about__subtitle">I'm David Wei</h2>
+                    <h3 class="about__subtitle">I'm David Wei</h3>
                     <p class="about__text">
                         I currently study Computer Science and Industrial Engineering at Northwestern. I love the intersection of technology and business and have experience in software engineering, product management, and consulting. My interests lie in applying AI/ML to solve real-world problems, and I'm actively working on projects that make an impact.
-                        <br>
-                        <br>
+                        <br><br>
                         In my free time, I enjoy painting, check out the art page ;), cooking, and exploring new places. Always open to trying new things and meeting new people! Hope you enjoy my website!
                     </p>
                 </div>
@@ -115,23 +114,33 @@
         <script src="skills.js"></script>
         <script src="script.js"></script>
 
-        <!--===== PROJECTS =====-->
+
+        <!-- Projects Section -->
         <section class="projects section" id="projects">
             <h2 class="section-title">Projects</h2>
 
             <div class="projects__container bd-grid">
                 <!-- Project 1 -->
-                <div class="projects__img">
-                    <img src="assets/img/esg.webp" alt="ESG Evaluator">
+                <a href="https://github.com/yourusername/esg-evaluator" target="_blank" rel="noopener noreferrer" class="projects__img">
+                    <img src="assets/img/esg.webp" alt="Screenshot of ESG Evaluator project">
                     <div class="projects__description">
                         <h3>ESG Evaluator</h3>
                         <p>An AI-driven system analyzing reports and news for real-time insights on companies' environmental and ethical performance.</p>
                     </div>
-                </div>
+                </a>
 
                 <!-- Project 2 -->
+                <a href="https://github.com/dawei25/davidwei" target="_blank" rel="noopener noreferrer" class="projects__img">
+                    <img src="assets/img/websitelogo.png" alt="Screenshot of Website logo">
+                    <div class="projects__description">
+                        <h3>This Website!</h3>
+                        <p>The code that goes behind what you're seeing right now! Click here to see how I created the animations and structured my website.</p>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
                 <div class="projects__img">
-                    <img src="assets/img/project2.jpg" alt="Legacy Data Migration">
+                    <img src="assets/img/elevate.png" alt="Screenshot of Legacy Data Migration project">
                     <div class="projects__description">
                         <h3>Legacy Data Migration</h3>
                         <p>Migrated and optimized 10 years of sales data to Google Cloud, automating the ETL process.</p>
@@ -142,19 +151,26 @@
             </div>
         </section>
 
-        <!--===== CONTACT =====-->
+        <!-- Contact Section -->
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
-
+        
             <div class="contact__container bd-grid">
-                <form action="mailto:davidwei@u.northwestern.edu" method="post" class="contact__form">
-                    <input type="text" name="name" placeholder="Name" class="contact__input" required>
-                    <input type="email" name="email" placeholder="Email" class="contact__input" required>
-                    <textarea name="message" cols="0" rows="10" placeholder="Message" class="contact__input" required></textarea>
-                    <input type="submit" value="Send Message" class="contact__button button">
+                <!-- Contact Form -->
+                <form action="mailto:davidwei@u.northwestern.edu" method="post" class="contact__form" aria-label="Contact Form">
+                    <label for="name" class="visually-hidden">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" class="contact__input" required>
+        
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" class="contact__input" required>
+        
+                    <label for="message" class="visually-hidden">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Message" class="contact__input" required></textarea>
+        
+                    <button type="submit" class="contact__button button">Send Message</button>
                 </form>
-
-                <!-- Additional contact information -->
+        
+                <!-- Contact Information -->
                 <div class="contact__info">
                     <p>Or if you’d prefer my contacts:</p>
                     <p>
@@ -168,10 +184,11 @@
                 </div>
             </div>
         </section>
+        
     </main>
 
-    <!-- ===== Decorative Elements ===== -->
-    <div class="airplanes-container" id="airplanes-container">
+    <!-- Decorative Elements -->
+    <div class="airplanes-container" id="airplanes-container" aria-hidden="true">
         <img src="assets/svg/airplane.svg" alt="Paper Plane" class="plane">
     </div>
 
@@ -208,7 +225,7 @@
         </svg>
     </div>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- Footer -->
     <footer class="footer">
         <p class="footer__title">David Wei</p>
         <div class="footer__social">
@@ -218,10 +235,10 @@
         <p>&#169; 2024 David Wei. All rights reserved.</p>
     </footer>
 
-    <!-- ===== SCROLL REVEAL ===== -->
+    <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- ===== MAIN JS ===== -->
+    <!-- Main JS -->
     <script src="assets/js/main.js"></script>
 </body>
 

@@ -70,13 +70,49 @@ sr.reveal('.about__text', { delay: 400, reset: true });
 sr.reveal('.about__img', { delay: 600, reset: true });
 
 // Skills Section Animations
-sr.reveal('.skills__subtitle', { delay: 200, reset: true });
-sr.reveal('.skills__text', { delay: 400, reset: true });
-sr.reveal('.skills__data', { interval: 200, reset: true });
-sr.reveal('.skills__img', { delay: 600, reset: true });
+sr.reveal('.skills__container', { 
+    origin: 'left', 
+    distance: '50px', 
+    duration: 1000, 
+    delay: 200, 
+    reset: true 
+});
+sr.reveal('.skill-card', { 
+    origin: 'bottom', 
+    distance: '20px', 
+    duration: 800, 
+    interval: 200, 
+    reset: true 
+});
 
 // Projects Section Animations
-sr.reveal('.projects__img', { interval: 200, reset: true });
+sr.reveal('.projects__container', { 
+    origin: 'right', 
+    distance: '50px', 
+    duration: 1000, 
+    delay: 200, 
+    reset: true 
+});
+sr.reveal('.projects__img', { 
+    origin: 'top', 
+    distance: '20px', 
+    duration: 800, 
+    interval: 200, 
+    reset: true 
+});
 
 // Contact Section Animations
-sr.reveal('.contact__input', { interval: 200, reset: true });
+sr.reveal('.contact__form', { 
+    origin: 'top', 
+    distance: '50px', 
+    duration: 1000, 
+    delay: 200, 
+    reset: true 
+});
+sr.reveal('.contact__info', { 
+    origin: 'bottom', 
+    distance: '50px', 
+    duration: 1000, 
+    delay: 400, 
+    reset: true 
+});
