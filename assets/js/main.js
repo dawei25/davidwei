@@ -116,3 +116,5 @@ sr.reveal('.contact__info', {
     delay: 400, 
     reset: true 
 });
+
+
