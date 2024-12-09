@@ -81,7 +81,7 @@
                     <p class="about__text">
                         I currently study Computer Science and Industrial Engineering at Northwestern. I love the intersection of technology and business and have experience in software engineering, product management, and consulting. My interests lie in applying AI/ML to solve real-world problems, and I'm actively working on projects that make an impact.
                         <br><br>
-                        In my free time, I enjoy painting, check out the art page ;), cooking, and exploring new places. Always open to trying new things and meeting new people! Hope you enjoy my website!
+                        In my free time, I enjoy painting (check out the art page!), cooking, and sports like skiing, skateboarding, and rock climbing. Always open to trying new things and meeting new people! Feel free to reach out!
                     </p>
                 </div>
             </div>
@@ -119,37 +119,53 @@
         <section class="projects section" id="projects">
             <h2 class="section-title">Projects</h2>
 
-            <div class="projects__container bd-grid">
+            <div class="projects__container">
                 <!-- Project 1 -->
-                <a href="https://github.com/yourusername/esg-evaluator" target="_blank" rel="noopener noreferrer" class="projects__img">
-                    <img src="assets/img/esg.webp" alt="Screenshot of ESG Evaluator project">
-                    <div class="projects__description">
-                        <h3>ESG Evaluator</h3>
-                        <p>An AI-driven system analyzing reports and news for real-time insights on companies' environmental and ethical performance.</p>
-                    </div>
-                </a>
-
-                <!-- Project 2 -->
-                <a href="https://github.com/dawei25/davidwei" target="_blank" rel="noopener noreferrer" class="projects__img">
-                    <img src="assets/img/websitelogo.png" alt="Screenshot of Website logo">
-                    <div class="projects__description">
-                        <h3>This Website!</h3>
-                        <p>The code that goes behind what you're seeing right now! Click here to see how I created the animations and structured my website.</p>
-                    </div>
-                </a>
-
-                <!-- Project 3 -->
-                <div class="projects__img">
-                    <img src="assets/img/elevate.png" alt="Screenshot of Legacy Data Migration project">
-                    <div class="projects__description">
-                        <h3>Legacy Data Migration</h3>
-                        <p>Migrated and optimized 10 years of sales data to Google Cloud, automating the ETL process.</p>
-                    </div>
+        <a href="https://github.com/dawei25/ESG-Evaluator" target="_blank" rel="noopener noreferrer" class="projects__item">
+            <h3 class="projects__title">ESG Insights Platform</h3>
+            <div class="projects__img">
+                <img src="assets/img/esg.webp" alt="Screenshot of ESG Insights Platform project">
+                <div class="projects__description">
+                    <p>An AI-driven platform leveraging natural language processing to analyze annual reports, news, and social media for real-time insights into companies' environmental, social, and governance (ESG) performance. Provides trend analysis and customizable scoring for deeper decision-making.</p>
                 </div>
-
-                <!-- Add more projects as needed -->
             </div>
-        </section>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="https://https://github.com/dawei25/handwriting_neural_networks" target="_blank" rel="noopener noreferrer" class="projects__item">
+            <h3 class="projects__title">Handwriting Recognition Model</h3>
+            <div class="projects__img">
+                <img src="assets/img/mnist.png" alt="Screenshot of Handwriting Recognition Model">
+                <div class="projects__description">
+                    <p>Implemented various ML algorithms (Convolutional and Feed Forward Neural Networks, Gaussian Mixture Models, KNN, K-means) to process images of handwritten numbers and letters and accurately match each input to its corresponding character.</p>
+                </div>
+            </div>
+        </a>
+
+        <!-- Project 3 -->
+        <div class="projects__item">
+            <h3 class="projects__title">Cloud Data Migration</h3>
+            <div class="projects__img">
+                <img src="assets/img/elevate.png" alt="Screenshot of Cloud Data Migration">
+                <div class="projects__description">
+                    <p>Migrated 300,000+ records, including 10 years of sales, customer, and inventory data, to Google Cloud. Designed an automated ETL pipeline to streamline workflows and enhance data accessibility through a modernized architecture.</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Project 4 -->
+        <a href="https://github.com/dawei25/davidwei" target="_blank" rel="noopener noreferrer" class="projects__item">
+            <h3 class="projects__title">Interactive Portfolio Website</h3>
+            <div class="projects__img">
+                <img src="assets/img/websitelogo.png" alt="Screenshot of website">
+                <div class="projects__description">
+                    <p>Explore the code behind what you're seeing right now! See how I designed the animations, interactive elements, and responsive layout using Tailwind CSS, JS, and HTML.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
 
         <!-- Contact Section -->
         <section class="contact section" id="contact">
@@ -157,19 +173,47 @@
         
             <div class="contact__container bd-grid">
                 <!-- Contact Form -->
-                <form action="https://formspree.io/f/mbljklrn" method="post" class="contact__form" aria-label="Contact Form">
-                    <label for="name" class="visually-hidden">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name" class="contact__input" required>
-        
-                    <label for="email" class="visually-hidden">Email</label>
-                    <input type="email" id="email" name="_replyto" placeholder="Email" class="contact__input" required>
-        
-                    <label for="message" class="visually-hidden">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Message" class="contact__input" required></textarea>
-        
-                    <button type="submit" class="contact__button button">Send Message</button>
-                    <p class="contact__response" id="form-response" style="display: none;"></p>
+                <form 
+                    action="https://formspree.io/f/mbljklrn" 
+                    method="POST" 
+                    id="contact-form" 
+                    class="contact__form" 
+                    aria-label="Contact Form"
+                    >
+                    <label for="email" class="visually-hidden">Your Email:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Your Email" 
+                        class="contact__input" 
+                        required
+                    >
+
+                    <label for="message" class="visually-hidden">Your Message:</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="5" 
+                        placeholder="Your Message" 
+                        class="contact__input" 
+                        required
+                    ></textarea>
+
+                    <button 
+                        type="submit" 
+                        class="contact__button button"
+                    >
+                        Send Message
+                    </button>
+
+                    <p 
+                        class="contact__response" 
+                        id="form-response" 
+                        style="display: none;"
+                    ></p>
                 </form>
+
         
                 <!-- Contact Information -->
                 <div class="contact__info">

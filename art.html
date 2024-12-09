@@ -6,10 +6,10 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Wei's Art Portfolio</title>
 
-    <!-- ===== Google Fonts ===== -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- ===== Lightbox CSS (for image gallery) ===== -->
+    <!-- Lightbox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 
     <!-- Styles -->
@@ -17,33 +17,182 @@
 </head>
 
 <body>
-    <!-- ===== ART PORTFOLIO HEADER ===== -->
+    <!-- HEADER -->
     <header class="l-header">
         <nav class="nav bd-grid">
             <a href="index.html" class="nav__logo">Back to Home</a>
         </nav>
     </header>
 
-    <!-- ===== ART PORTFOLIO SECTION ===== -->
-    <section class="art section" id="art">
-        <h2 class="section-title art__title">Art Portfolio</h2>
+    <!-- MAIN WRAPPER -->
+    <main class="main-container">
+        <!-- ART PORTFOLIO SECTION -->
+        <section class="art section" id="art">
+            <h2 class="section-title art__title">Art Portfolio</h2>
 
-        <div class="art__container bd-grid">
-            <!-- Placeholder Images -->
-            <a href="assets/img/art1.jpg" data-lightbox="art-gallery" class="art__img">
-                <img src="assets/img/art1_thumb.jpg" alt="Art 1">
-            </a>
-            <a href="assets/img/art2.jpg" data-lightbox="art-gallery" class="art__img">
-                <img src="assets/img/art2_thumb.jpg" alt="Art 2">
-            </a>
-            <a href="assets/img/art3.jpg" data-lightbox="art-gallery" class="art__img">
-                <img src="assets/img/art3_thumb.jpg" alt="Art 3">
-            </a>
-            <!-- Add more images as needed -->
-        </div>
-    </section>
+            <!-- Charcoal Section -->
+            <article class="art-category">
+                <h3>Charcoal Drawings</h3>
+                <div class="art__container bd-grid">
+                    <div class="art__item">
+                        <a href="assets/img/c1.png" data-lightbox="charcoal" class="art__img">
+                            <img src="assets/img/c1.png" alt="Charcoal Drawing 1">
+                        </a>
+                        <p class="art__description">Dimensions: 18" x 28" <br>
+                            Concept: Expressionist/Semi-realism<br>
+                            Year: 2022. P1: Done with all charcoal</p>
+                    </div>
+                    
+                    <div class="art__item">
+                        <a href="assets/img/c2.png" data-lightbox="charcoal" class="art__img">
+                            <img src="assets/img/c2.png" alt="Charcoal Drawing 2">
+                        </a>
+                        <p class="art__description">Dimensions: 18" x 28"<br>
+                            Concept: Expressionist/Semi-realism<br>
+                            Year: 2022. P2: Added color with pastel and colored pencils.</p>
+                    </div>
+                    
+                    <div class="art__item">
+                        <a href="assets/img/c3.png" data-lightbox="charcoal" class="art__img">
+                            <img src="assets/img/c3.png" alt="Charcoal Drawing 3">
+                        </a>
+                        <p class="art__description">Dimensions: 14" x 22" <br>
+                            Year: 2022</p>
+                    </div>
 
-    <!-- ===== FOOTER ===== -->
+                    <div class="art__item">
+                        <a href="assets/img/c4.png" data-lightbox="charcoal" class="art__img">
+                            <img src="assets/img/c4.png" alt="Charcoal Drawing 3">
+                        </a>
+                        <p class="art__description">Dimensions: 12" x 24" <br>
+                            Year: 2023</p>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- Graphite Section -->
+            <article class="art-category">
+                <h3>Graphite Sketches</h3>
+                <div class="art__container bd-grid">
+                    <div class="art__item">
+                        <a href="assets/img/g1.png" data-lightbox="graphite" class="art__img">
+                            <img src="assets/img/g1.png" alt="Graphite Sketch 1">
+                        </a>
+                        <p class="art__description">Dimensions: 10" x 14" <br>
+                            First realism piece I drew <br>
+                            Year: 2020</p>
+                    </div>
+                    <div class="art__item">
+                        <a href="assets/img/g2.png" data-lightbox="charcoal" class="art__img">
+                            <img src="assets/img/g2.png" alt="Charcoal Drawing 2">
+                        </a>
+                        <p class="art__description">Dimensions: 10" x 14" <br>
+                            First hyper-realism piece, attempted with multimedia (graphite, markers, colored pencils).<br>
+                             Year: 2020</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Oil Paintings Section -->
+            <article class="art-category">
+                <h3>Oil Paintings</h3>
+                <div class="art__container bd-grid">
+                    <div class="art__item">
+                        <a href="assets/img/oil1.png" data-lightbox="oil" class="art__img">
+                            <img src="assets/img/oil1.png" alt="Oil Painting 1">
+                        </a>
+                        <p class="art__description">Dimensions: 12" x 20" <br>
+                            Concept: Expressionist/Semi-realism<br>
+                            Year: 2024</p>
+                    </div>
+                    <div class="art__item">
+                        <a href="assets/img/oil2.png" data-lightbox="oil" class="art__img">
+                            <img src="assets/img/oil2.png" alt="Oil Painting 1">
+                        </a>
+                        <p class="art__description">Dimensions: 16" x 22" <br>
+                            Concept: Still Life Study<br>
+                            Year: 2024</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Watercolor Section -->
+            <article class="art-category">
+                <h3>Watercolor Works</h3>
+                <div class="art__container bd-grid">
+                    <div class="art__item">
+                        <a href="assets/img/wc1.png" data-lightbox="watercolor" class="art__img">
+                            <img src="assets/img/wc1.png" alt="Watercolor Art 1">
+                        </a>
+                        <p class="art__description">Dimensions: 10" x 18" <br>
+                            Medium: Watercolor<br>
+                            Year: 2022.</p>
+                    </div>
+                    <div class="art__item">
+                        <a href="assets/img/wc2.png" data-lightbox="watercolor" class="art__img">
+                            <img src="assets/img/wc2.png" alt="Watercolor Art 1">
+                        </a>
+                        <p class="art__description">Dimensions: 12" x 14" <br>
+                            Medium: Watercolor<br>
+                            Year: 2022.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Acrylic Section -->
+            <article class="art-category">
+                <h3>Acrylic Paintings</h3>
+                <div class="art__container bd-grid">
+                    <div class="art__item">
+                        <a href="assets/img/a1.png" data-lightbox="acrylic" class="art__img">
+                            <img src="assets/img/a1.png" alt="Acrylic Painting 1">
+                        </a>
+                        <p class="art__description">Dimensions: 12" x 12".<br>
+                            Bold acrylic strokes capturing flesh and expression in an abstract composition.<br>
+                            Year: 2023.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Character Design Sketches Section -->
+            <article class="art-category">
+                <h3>Digital Art</h3>
+                <div class="art__container bd-grid">
+                    <div class="art__item">
+                        <a href="assets/img/d1.png" data-lightbox="character" class="art__img">
+                            <img src="assets/img/d1.png" alt="Character Design Sketch 1">
+                        </a>
+                        <p class="art__description">Concept sketch exploring angelic beings. <br>
+                        Year: 2023</p>
+                    </div>
+                    <div class="art__item">
+                        <a href="assets/img/d2.png" data-lightbox="character" class="art__img">
+                            <img src="assets/img/d2.png" alt="Character Design Sketch 1">
+                        </a>
+                        <p class="art__description">Concept sketch for new character design. <br>
+                            Year: 2023</p>
+                    </div>
+                    <div class="art__item">
+                        <a href="assets/img/d3.png" data-lightbox="character" class="art__img">
+                            <img src="assets/img/d3.png" alt="Character Design Sketch 1">
+                        </a>
+                        <p class="art__description">Concept study focused on light reflection. <br>
+                            Year: 2023</p>
+                    </div>
+                    <div class="art__item">
+                        <a href="assets/img/d4.png" data-lightbox="character" class="art__img">
+                            <img src="assets/img/d4.png" alt="Character Design Sketch 1">
+                        </a>
+                        <p class="art__description">Concept sketch for new character design. <br>
+                            Year: 2022</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <p class="footer__title">David Wei</p>
         <div class="footer__social">
@@ -53,10 +202,10 @@
         <p>&#169; 2024 David Wei. All rights reserved.</p>
     </footer>
 
-    <!-- ===== LIGHTBOX SCRIPT ===== -->
+    <!-- LIGHTBOX SCRIPT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
-    <!-- ===== MAIN JS ===== -->
+    <!-- MAIN JS -->
     <script src="assets/js/main.js"></script>
 </body>
 

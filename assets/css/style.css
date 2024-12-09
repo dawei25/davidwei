@@ -477,21 +477,32 @@ img {
     }
 }
 
-/*===== PROJECTS SECTION =====*/
 .projects__container {
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
     justify-content: space-between; /* Distributes space evenly between items */
-    gap: 2rem; /* Adds space between project cards */
+    gap: 1.5rem; /* Reduces space between project cards */
     padding: 2rem; /* Optional: Adds padding around the container */
 }
 
+.projects__item {
+    flex: 1 1 calc(25% - 1.5rem); /* Adjusts width to fit four items per row with spacing */
+    max-width: 250px; /* Limits the maximum size of each project card */
+    text-align: center; /* Centers text elements */
+}
+
+.projects__title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Reduces spacing between the title and image */
+}
+
 .projects__img {
-    flex: 1 1 30%;
-    margin-bottom: var(--mb-4);
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    max-width: 100%; /* Ensures images scale with the container */
+    margin: 0 auto; /* Centers the image within its container */
 }
 
 .projects__img img {
@@ -509,7 +520,7 @@ img {
     background: rgba(47, 54, 64, 0.8);
     color: #fff;
     width: 100%;
-    padding: var(--mb-2);
+    padding: 0.8rem; /* Adjusted padding for a more compact design */
     text-align: center;
     opacity: 0;
     transition: opacity 0.5s;
@@ -519,13 +530,11 @@ img {
     opacity: 1;
 }
 
-.projects__description h3 {
-    margin-bottom: var(--mb-1);
+.projects__description p {
+    font-size: 0.8rem; /* Slightly smaller font size for descriptions */
+    margin: 0;
 }
 
-.projects__description p {
-    font-size: 0.9rem;
-}
 
 /*===== CONTACT SECTION =====*/
 /*===== CONTACT SECTION =====*/
@@ -644,14 +653,43 @@ img {
     padding: 4rem 0;
 }
 
+/* Make the main art container wider and more spacious */
 .art__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--mb-4);
-    max-width: 1000px;
-    margin: 0 auto;
+    width: 100%; /* Full width of the viewport or parent */
+    margin: 0;   /* No auto-centering margin */
 }
 
+/* Classes to handle columns dynamically */
+.two-items {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.three-items {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* Individual art categories, if you use <article class="art-category"> wrappers */
+.art-category {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Style for the category headings */
+.art-category h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Image styles */
 .art__img img {
     width: 100%;
     border-radius: 10px;
@@ -662,6 +700,7 @@ img {
     transform: scale(1.05);
 }
 
+/* Title styling remains the same, just ensuring it's centered and decorative line is visible */
 .art__title {
     text-align: center;
     font-size: var(--h2-font-size);
@@ -680,6 +719,27 @@ img {
     transform: translateX(-50%);
     bottom: -10px;
 }
+
+/* Descriptions below each piece */
+.art__description {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Optional decorative elements for floral or ornamental designs */
+.decorative-bar {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.decorative-img {
+    max-width: 100px;
+    opacity: 0.7;
+}
+
 
 /*===== MEDIA QUERIES =====*/
 @media screen and (max-width: 768px) {

@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
      if (contactForm) {
          contactForm.addEventListener('submit', function(event) {
              event.preventDefault(); // Prevent the default form submission
+             console.log('Form action URL:', contactForm.action);
+
  
              const formData = new FormData(contactForm);
  
@@ -65,6 +67,24 @@ document.addEventListener('DOMContentLoaded', () => {
              });
          });
      }
+
+    const artContainers = document.querySelectorAll('.art__container');
+
+    artContainers.forEach(container => {
+        const items = container.querySelectorAll('.art__item');
+        const count = items.length;
+
+        if (count === 3) {
+            container.classList.add('three-items');
+        } else if (count % 2 === 0) {
+            // For any even number of items, add two-items class
+            container.classList.add('two-items');
+        } else {
+            // Fallback if it's not three and not even (e.g., 5 items)
+            // Adjust as needed
+            container.classList.add('two-items');
+        }
+    });
  });
 
 
