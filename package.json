@@ -1,0 +1,16 @@
+{
+  "name": "davidweiwebsite",
+  "version": "1.0.0",
+  "description": "Welcome to my Personal Portfolio Website! I'm David Wei, a passionate developer and designer dedicated to creating engaging and user-friendly web experiences. This website showcases my skills, projects, and provides a way for you to get in touch with me.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

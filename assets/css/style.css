@@ -49,7 +49,6 @@ body {
     font-size: var(--normal-font-size);
     color: var(--text-color);
     background-color: var(--background-color);
-    cursor: url('assets/img/cursor.png'), auto;
 }
 
 h1, h2, p {
@@ -449,16 +448,23 @@ img {
     .skill-name {
         font-size: 0.9rem;
     }
+    
+    .skills__container {
+        gap: 1.5rem;
+        justify-content: space-around;
+    }
 }
 
 @media (max-width: 480px) {
     .skills__container {
         gap: 1rem;
+        justify-content: space-around;
     }
 
     .skill-card {
         width: 80px;
         height: 80px;
+        margin: 0.5rem;
     }
 
     .skill-background {
@@ -780,7 +786,6 @@ img {
     }
 
     .about__container,
-    .skills__container,
     .projects__container {
         flex-direction: column;
     }
@@ -796,39 +801,18 @@ img {
 /*===== DECORATIVE ELEMENTS =====*/
 /* Paper Plane */
 .airplanes-container {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    z-index: 3;
-    animation: paper-plane-scoping 4s alternate infinite linear;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* No fixed positioning or transforms - all will be done in JS */
+    position: fixed; /* Will be manipulated by JavaScript */
+    width: 80px;
+    height: 80px;
+    z-index: 999;
+    pointer-events: none; /* Make sure it doesn't block interactions */
 }
 
 .plane {
     width: 100%;
     height: 100%;
-    animation: paper-plane-soaring 6s forwards infinite ease-in-out;
-}
-
-/* Paper Plane Animations */
-@keyframes paper-plane-scoping {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(100px); }
-}
-
-@keyframes paper-plane-soaring {
-    0% { transform: rotate(0deg); }
-    40% { transform: rotate(15deg); }
-    50% { transform: rotate(15deg); }
-    60% { transform: rotate(-10deg); }
-    70% { transform: rotate(-10deg); }
-    100% { transform: rotate(0deg); }
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 /* Clouds */
